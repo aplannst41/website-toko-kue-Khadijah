@@ -1,0 +1,184 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Shadow for depth -->
+    <filter id="badgeShadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#78350F" flood-opacity="0.15" />
+    </filter>
+
+    <!-- Linear Gradients for rich bakery feel -->
+    <linearGradient id="scallopGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+
+    <linearGradient id="chocGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#542512" />
+      <stop offset="100%" stop-color="#361508" />
+    </linearGradient>
+
+    <linearGradient id="donutPink" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F472B6" />
+      <stop offset="100%" stop-color="#DB2777" />
+    </linearGradient>
+
+    <linearGradient id="donutDough" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBBF24" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+
+    <linearGradient id="cakeSlice" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF1F2" />
+      <stop offset="100%" stop-color="#FDE047" />
+    </linearGradient>
+
+    <linearGradient id="cherryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EF4444" />
+      <stop offset="100%" stop-color="#991B1B" />
+    </linearGradient>
+
+    <!-- Curved Text Paths -->
+    <!-- Top Arc: center 250, 250, radius 180, curved clockwise for top reading -->
+    <path id="topTextArc" d="M 80,250 A 170,170 0 1,1 420,250" fill="none" />
+    <!-- Bottom Arc: center 250, 250, radius 180, curved clockwise for bottom reading -->
+    <path id="bottomTextArc" d="M 95,275 A 165,165 0 0,0 405,275" fill="none" />
+  </defs>
+
+  <!-- Base White Container (Transparent or circular) -->
+  <circle cx="250" cy="250" r="240" fill="#FFFFFF" filter="url(#badgeShadow)" />
+
+  <!-- Scalloped Wavy Yellow Border (Exact 24-petal sunburst badge from sign) -->
+  <path fill="url(#scallopGrad)" d="
+    M 250,15
+    C 264,15 274,27 287,31 C 300,35 315,31 326,38 C 337,45 344,59 353,68 C 362,77 377,84 384,95 C 391,106 391,121 395,134 C 399,147 411,157 412,171 C 413,185 407,199 406,213 C 405,227 413,240 410,254 C 407,268 397,279 392,292 C 387,305 389,320 381,331 C 373,342 359,348 349,357 C 339,366 331,380 319,386 C 307,392 292,391 279,394 C 266,397 254,407 240,407 C 226,407 214,397 201,394 C 188,391 173,392 161,386 C 149,380 141,366 131,357 C 121,348 107,342 99,331 C 91,320 93,305 88,292 C 83,279 73,268 70,254 C 67,240 75,227 74,213 C 73,199 67,185 68,171 C 69,157 81,147 85,134 C 89,121 89,106 96,95 C 103,84 118,77 127,68 C 136,59 143,45 154,38 C 165,31 180,35 193,31 C 206,27 216,15 230,15 Z"
+    transform="scale(1.15) translate(-32, -32)" />
+
+  <!-- Inner Clean White Circle -->
+  <circle cx="250" cy="250" r="195" fill="#FFFFFF" stroke="#FDE68A" stroke-width="4" />
+  
+  <!-- Inner Thin Golden Ring -->
+  <circle cx="250" cy="250" r="148" fill="none" stroke="#F59E0B" stroke-width="3" stroke-dasharray="1 0" opacity="0.4" />
+
+  <!-- ================= TOP TEXT: KHADIJAH ================= -->
+  <text font-family="'Plus Jakarta Sans', 'Arial Black', sans-serif" font-weight="900" font-size="44" fill="#451A03" letter-spacing="9">
+    <textPath href="#topTextArc" startOffset="50%" text-anchor="middle">
+      KHADIJAH
+    </textPath>
+  </text>
+
+  <!-- ================= BOTTOM TEXT: DONAT & CAKE ================= -->
+  <text font-family="'Plus Jakarta Sans', 'Arial Black', sans-serif" font-weight="800" font-size="34" fill="#451A03" letter-spacing="5">
+    <textPath href="#bottomTextArc" startOffset="50%" text-anchor="middle">
+      DONAT &amp; CAKE
+    </textPath>
+  </text>
+
+  <!-- ================= CENTER ILLUSTRATION ================= -->
+  <g id="illustration" transform="translate(250, 246)">
+
+    <!-- 1. BACK CAKE: Chocolate Drip Tiered Cake -->
+    <g id="dripCake" transform="translate(0, -22)">
+      <!-- Cake Base Body -->
+      <path d="M -50,15 L -50,45 C -50,60 50,60 50,45 L 50,15 Z" fill="#FCE7F3" stroke="#DB2777" stroke-width="2" />
+      <path d="M -50,15 C -50,28 50,28 50,15 C 50,2 -50,2 -50,15 Z" fill="#F472B6" />
+
+      <!-- Top Chocolate Sponge -->
+      <path d="M -46,-10 L -46,18 C -46,30 46,30 46,18 L 46,-10 Z" fill="#78350F" />
+      <!-- Chocolate Top Surface -->
+      <ellipse cx="0" cy="-10" rx="46" ry="14" fill="#451A03" />
+
+      <!-- Chocolate Drip Layer -->
+      <path d="
+        M -46,-8
+        C -46,6 -44,14 -42,14
+        C -40,14 -38,-2 -34,-2
+        C -30,-2 -28,24 -24,24
+        C -20,24 -18,4 -14,4
+        C -10,4 -8,18 -4,18
+        C 0,18 2,2 6,2
+        C 10,2 12,22 16,22
+        C 20,22 22,5 26,5
+        C 30,5 32,15 36,15
+        C 40,15 42,-2 46,-8
+        C 46,-20 -46,-20 -46,-8 Z"
+        fill="url(#chocGrad)" />
+
+      <!-- Drip Gloss Highlight -->
+      <ellipse cx="-15" cy="-14" rx="20" ry="4" fill="#FFFFFF" opacity="0.35" transform="rotate(-5)" />
+
+      <!-- Cherries on Top -->
+      <!-- Cherry Stems -->
+      <path d="M -7,-24 C -5,-38 2,-42 5,-40 M 8,-22 C 6,-36 2,-42 5,-40" fill="none" stroke="#15803D" stroke-width="2.5" stroke-linecap="round" />
+      <path d="M 5,-40 C 14,-46 16,-38 12,-36" fill="none" stroke="#22C55E" stroke-width="2" stroke-linecap="round" />
+      <!-- Cherry 1 (Left) -->
+      <circle cx="-7" cy="-22" r="8" fill="url(#cherryGrad)" />
+      <circle cx="-9" cy="-24" r="2.5" fill="#FFFFFF" opacity="0.8" />
+      <!-- Cherry 2 (Right) -->
+      <circle cx="8" cy="-20" r="7.5" fill="url(#cherryGrad)" />
+      <circle cx="6" cy="-22" r="2.2" fill="#FFFFFF" opacity="0.8" />
+    </g>
+
+    <!-- 2. LEFT ITEM: Pink Glazed Strawberry Donut -->
+    <g id="donut" transform="translate(-40, 28) scale(0.95)">
+      <!-- Donut Dough Background/Body -->
+      <ellipse cx="0" cy="0" rx="36" ry="34" fill="url(#donutDough)" stroke="#B45309" stroke-width="2" />
+      <!-- Donut Hole Dough Border -->
+      <ellipse cx="0" cy="1" rx="12" ry="11" fill="#FFFFFF" stroke="#B45309" stroke-width="2" />
+
+      <!-- Donut Pink Icing Frosting -->
+      <path d="
+        M -33,-3
+        C -36,8 -28,26 -16,30
+        C -8,32 0,22 5,26
+        C 10,29 18,31 26,24
+        C 34,16 35,4 32,-8
+        C 29,-18 22,-28 10,-30
+        C 0,-32 -8,-25 -18,-24
+        C -28,-23 -31,-12 -33,-3 Z"
+        fill="url(#donutPink)" />
+
+      <!-- Donut Hole Icing cutout -->
+      <path d="
+        M -10,0
+        C -10,7 -3,10 0,9
+        C 3,8 9,7 9,0
+        C 9,-6 4,-9 0,-9
+        C -5,-9 -10,-6 -10,0 Z"
+        fill="#FFFFFF" />
+
+      <!-- Sprinkles (White, Yellow, Light Blue, Chocolate) -->
+      <!-- White Sprinkles -->
+      <rect x="-22" y="-14" width="7" height="2.5" rx="1.2" fill="#FFFFFF" transform="rotate(25)" />
+      <rect x="14" y="-12" width="7" height="2.5" rx="1.2" fill="#FFFFFF" transform="rotate(-30)" />
+      <rect x="-8" y="18" width="7" height="2.5" rx="1.2" fill="#FFFFFF" transform="rotate(45)" />
+      <!-- Yellow Sprinkles -->
+      <rect x="-18" y="10" width="7" height="2.5" rx="1.2" fill="#FEF08A" transform="rotate(-20)" />
+      <rect x="16" y="12" width="7" height="2.5" rx="1.2" fill="#FEF08A" transform="rotate(60)" />
+      <rect x="-4" y="-22" width="7" height="2.5" rx="1.2" fill="#FEF08A" transform="rotate(10)" />
+      <!-- Sky Blue Sprinkles -->
+      <rect x="18" y="-2" width="6.5" height="2.5" rx="1.2" fill="#BAE6FD" transform="rotate(15)" />
+      <rect x="-24" y="-2" width="6.5" height="2.5" rx="1.2" fill="#BAE6FD" transform="rotate(-50)" />
+      <!-- Chocolate Sprinkles -->
+      <rect x="6" y="-20" width="6" height="2.3" rx="1.2" fill="#451A03" transform="rotate(-35)" />
+      <rect x="8" y="20" width="6" height="2.3" rx="1.2" fill="#451A03" transform="rotate(15)" />
+    </g>
+
+    <!-- 3. RIGHT ITEM: Triangle Cake Slice -->
+    <g id="cakeSlice" transform="translate(38, 26) scale(0.92)">
+      <!-- Slice Body -->
+      <path d="M -18,22 L 28,10 L 16,-22 L -30,-10 Z" fill="#FEF3C7" stroke="#D97706" stroke-width="1.8" />
+      
+      <!-- Back Frosting -->
+      <path d="M 28,10 L 16,-22 L 24,-18 L 34,14 Z" fill="#F43F5E" />
+
+      <!-- Cake Slice Cream Layers -->
+      <path d="M -26,-2 L 20,13" stroke="#F472B6" stroke-width="4" stroke-linecap="round" />
+      <path d="M -22,8 L 24,19" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" />
+      <path d="M -28,-10 L 16,-22 L -10,-18 Z" fill="#FFF1F2" />
+
+      <!-- Strawberry on top of slice -->
+      <circle cx="-16" cy="-14" r="6.5" fill="url(#cherryGrad)" />
+      <circle cx="-18" cy="-16" r="1.8" fill="#FFFFFF" opacity="0.75" />
+      <path d="M -16,-20 L -14,-22 M -16,-20 L -18,-23" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" />
+    </g>
+  </g>
+</svg>
