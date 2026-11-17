@@ -2,6 +2,10 @@
 
 Website e-commerce toko kue **Khadijah Donat & Cake** berbasis Laravel 10 untuk pemesanan aneka donat kentang, pizza, kue ulang tahun custom, pastry, dan kue tradisional secara online.
 
+## Tampilan Halaman Beranda
+
+![Tampilan Halaman Beranda Khadijah Donat & Cake](docs/screenshots/beranda.jpg)
+
 ## Fitur Utama
 
 ### Pelanggan
